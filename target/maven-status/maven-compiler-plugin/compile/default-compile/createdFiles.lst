@@ -1,0 +1,10 @@
+com\example\imagemapping\controller\MainController.class
+com\example\imagemapping\responseWrapper\Image.class
+com\example\imagemapping\repository\AvatarRepository.class
+com\example\imagemapping\responseWrapper\ResponseWrapper.class
+com\example\imagemapping\entity\Avatar.class
+com\example\imagemapping\service\AvatarImpl.class
+com\example\imagemapping\entity\Image$ImageBuilder.class
+com\example\imagemapping\entity\Image.class
+com\example\imagemapping\service\AvatarService.class
+com\example\imagemapping\ImageMappingApplication.class
