@@ -1,6 +1,7 @@
 package com.example.imagemapping.controller;
 
 import com.example.imagemapping.entity.Avatar;
+import com.example.imagemapping.entity.Image;
 import com.example.imagemapping.service.AvatarService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,10 @@ public class MainController {
     private final AvatarService avatarService;
 
     @PostMapping(value = "/save")
-    private Avatar saveNewDetails(@ModelAttribute Avatar avatar){
+    private Avatar saveNewDetails(@ModelAttribute Avatar avatar, @RequestPart("img") MultipartFile multipartFile) throws IOException {
+        Image image = new Image();
+        image.setProfilePhoto(multipartFile.getBytes());
+        avatar.setImage(image);
         return this.avatarService.saveNewDetails(avatar);
     }
 

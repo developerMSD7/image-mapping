@@ -28,10 +28,9 @@ public class AvatarImpl implements AvatarService {
         return this.avatarRepository.findAll();
     }
 
-    @Override
     public String findPhotoById(Long id) {
-        return this.avatarRepository.findById(id).orElseThrow().getImage().getProfilePhoto();
-
+//        return this.avatarRepository.findById(id).orElseThrow().getImage().getProfilePhoto();
+        return null;
     }
 
     @Override

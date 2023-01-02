@@ -19,5 +19,5 @@ public class Image {
     @GeneratedValue
     private Long id;
     @Lob
-    private String profilePhoto;
+    private byte[] profilePhoto;
 }
